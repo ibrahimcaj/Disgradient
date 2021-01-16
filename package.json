@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "discord-folder-gradient",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +14,7 @@
     "tinygradient": "^1.1.2",
     "web-vitals": "^0.2.4"
   },
+  "homepage": "http://vanishedvan.github.io/discord-folder-gradient",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
