@@ -4,7 +4,7 @@ import Folders from './Folders';
 import Util from './Util';
 
 import logo from '../logo.png';
-import rick from '../logo-rick.gif';
+import rick from '../logo-rick.png';
 import '../css/TopWrapper.css';
 
 class TopWrapper extends React.Component {
