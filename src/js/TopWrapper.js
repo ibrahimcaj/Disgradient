@@ -14,7 +14,7 @@ class TopWrapper extends React.Component {
                 <img src={logo} onMouseOver={(event) => ((event).currentTarget.src = rick)} onMouseOut={(event) => ((event).currentTarget.src = logo)} alt="Logo" width="96" height="96px" />
                 
                 <h1 className="text-title">Discord Folder Gradient</h1>
-                <p className="text-description">Create a gradient for your Discord folders!</p>
+                <p className="text-description">Create a gradient for your Discord folders and roles!</p>
 
                 <div id="folder-wrapper">
                     <Folders parentObject={this} />
