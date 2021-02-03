@@ -1,12 +1,8 @@
 import React from 'react';
 
-//import Colors from './Colors';
-//import Points from './Points';
-//import AddBlankColor from './AddBlankColor';
-
-const Colors = React.lazy(() => import('./Colors'));
-const Points = React.lazy(() => import('./Points'));
-const AddBlankColor = React.lazy(() => import('./AddBlankColor'));
+import Colors from './Colors';
+import Points from './Points';
+import AddBlankColor from './AddBlankColor';
 
 import '../css/BottomWrapper.css';
 
