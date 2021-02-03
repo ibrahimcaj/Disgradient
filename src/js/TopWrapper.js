@@ -1,7 +1,10 @@
 import React from 'react';
 
-import Folders from './Folders';
-import Util from './Util';
+//import Folders from './Folders';
+//import Util from './Util';
+
+const Folders = React.lazy(() => import('./Folders'));
+const Util = React.lazy(() => import('./Util'));
 
 import logo from '../logo.png';
 import rick from '../logo-rick.png';
