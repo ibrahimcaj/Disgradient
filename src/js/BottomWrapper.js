@@ -29,7 +29,7 @@ class BottomWrapper extends React.Component {
                     </div>
                     <div className="input-item" id="points-menu">
                         <div className="input-title">
-                            Folders
+                            Points
                         </div>
                         <div className="input-content">
                             <div className="input-content-item">
