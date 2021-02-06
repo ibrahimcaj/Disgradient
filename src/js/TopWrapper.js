@@ -2,6 +2,7 @@ import React from 'react';
 
 import Folders from './Folders';
 import Util from './Util';
+import Codes from './Codes';
 
 import logo from '../logo.png';
 import rick from '../logo-rick.png';
