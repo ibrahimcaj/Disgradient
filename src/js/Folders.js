@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+
+import Codes from './Codes';
 
 var folderArray = [
     (
@@ -27,7 +28,11 @@ class Folders extends React.Component {
         return folderArray;
     }
     displayFolders() {
-        if (parentObject) parentObject.forceUpdate();
+        if (parentObject) {
+            parentObject.forceUpdate();
+
+            Codes.insert();
+        }
 
         return folderArray;
     }

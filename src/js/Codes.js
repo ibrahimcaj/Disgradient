@@ -1,25 +1,33 @@
 import axios from 'axios';
 
+import Util from './Util';
+import Code from './Code';
+
+var codesArray = [];
+
 var Codes = {
     fetch: (id = null) => {
-        return new Promise((resolve, reject) => {
-            axios.get('http://localhost:3030/codes').then((response) => {
-                // ...
-
-                resolve(response.data.codes);
-            }).catch(reject);
-        });
+        axios.get('http://localhost:3030/codes').then((response) => {
+            // ...
+            
+            return response.data.codes;
+        }).catch(console.error);
     },
-    insert: (codes) => {
-        return new Promise((resolve, reject) => {
-            if (!codes) return reject(codes);
+    insert: () => {
+        var codes = Util.prototype.getFolderColors();
 
-            axios.post('http://localhost:3030/codes', { codes: codes }).then((response) => {
-                // ...
+        if (codes.length === 0) return;
+        if (codes.join(', ') === codesArray.join(', ')) return;
 
-                resolve(response.data);
-            }).catch(reject);
-        });
+        codesArray = codes;
+
+        axios.post('http://localhost:3030/codes', { codes: codes }).then((response) => {
+            // ...
+
+            Code.prototype.updateCode(response.data.id);
+
+            return response.data;
+        }).catch(console.error);
     }
 }
 export default Codes;

@@ -6,11 +6,16 @@ body {
     background-color: #f2f3f5;
     font-family: 'Hind';
     font-display: swap;
+    user-select: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+text, p, h1, h2, h3 {
+    cursor: text;
 }
 
 textarea:focus, input:focus{

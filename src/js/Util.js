@@ -5,15 +5,18 @@ import Gradient from './Gradient';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
+var folderColors = [];
+
 class Util extends React.Component {
-    setFolderStyle(a) {
-        console.log(a)
+    getFolderColors() {
+        return folderColors;
     }
     generateFolders() {
         var gradientArray = Gradient.prototype.generateGradient();
     
         Folders.prototype.resetFolders();
     
+        folderColors = [];
         gradientArray.forEach((gradientHex) => {
             var folderElement = (
                 <CopyToClipboard id={`folder-element${Folders.prototype.getFolders().length}`} text={gradientHex} key={Folders.prototype.getFolders().length}>
@@ -29,6 +32,8 @@ class Util extends React.Component {
                     </div>
                 </CopyToClipboard>
             );
+
+            folderColors.push(gradientHex);
     
             Folders.prototype.addFolder(folderElement);
         });

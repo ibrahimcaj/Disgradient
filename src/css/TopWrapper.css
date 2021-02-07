@@ -76,6 +76,7 @@
     margin-top: 20px;
     margin-bottom: 0px;
     margin-left: 25%;
+
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -84,11 +85,13 @@
 .button-item {
     width: 75px;
     height: 63px;
+
     background-color: #ffffff;
 }
 .button-content {
     width: 50%;
     margin-left: 25%;
+
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -102,17 +105,46 @@
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 50px;
+
     background-color: #d4d7dc;
+}
+.button-content-double-item {
+    min-width: 220px;
+    min-height: 63px;
+    max-width: 220px;
+    max-height: 63px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50px;
+
+    background-color: #d4d7dc;
+    display: flex;
+}
+.button-content-double-item > div {
+    margin-top: 7%;
 }
 .button-content-item-icon {
     min-width: 63px;
     min-height: 63px;
     margin-top: 20%;
+
     cursor: pointer;
     background: border-box;
 }
 .button-content-item-icon:first-child {
     fill: #4f5660;
+}
+.button-content-item-text {
+    font-weight: 600;
+    font-size: 15px;
+
+    margin: auto;
+    margin-left: 0%;
+    
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: left;
+    color: #4F5660;
 }
 
 [tag="clickable-item"] {
