@@ -7,7 +7,7 @@ var codesArray = [];
 
 var Codes = {
     fetch: (id = null) => {
-        axios.get('http://disgradientserver.vanished.rocks/codes').then((response) => {
+        axios.get('http://144.172.75.30:3030/codes').then((response) => {
             // ...
             
             return response.data.codes;
@@ -21,7 +21,7 @@ var Codes = {
 
         codesArray = codes;
 
-        axios.post('http://disgradientserver.vanished.rocks/codes', { codes: codes }).then((response) => {
+        axios.post('http://144.172.75.30:3030/codes', { codes: codes }).then((response) => {
             // ...
 
             Code.prototype.updateCode(response.data.id);
