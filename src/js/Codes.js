@@ -9,6 +9,7 @@ var Codes = {
     fetch: (id = null) => {
         axios.get('https://144.172.75.30:8000/codes').then((response) => {
             // ...
+            console.log(response);
             
             return response.data.codes;
         }).catch(console.error);
