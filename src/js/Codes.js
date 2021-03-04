@@ -7,7 +7,6 @@ var codesArray = [];
 
 var Codes = {
     fetch: (id = null) => {
-        console.log('fetch');
         axios.get('https://144.172.75.30:8000/codes').then((response) => {
             // ...
             
@@ -15,7 +14,6 @@ var Codes = {
         }).catch(console.error);
     },
     insert: () => {
-        console.log('insert');
         var codes = Util.prototype.getFolderColors();
 
         if (codes.length === 0) return;
