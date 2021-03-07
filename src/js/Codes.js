@@ -9,7 +9,11 @@ var codesArray = [];
 
 var Codes = {
     fetch: (id = null) => {
-        axios.get('https://144.172.75.30:8000/codes').then((response) => {
+        const agent = new https.Agent({  
+            rejectUnauthorized: false
+        });
+        
+        axios.get('https://144.172.75.30:8000/codes', { httpsAgent: agent }).then((response) => {
             // ...
             
             return response.data.codes;
@@ -25,7 +29,11 @@ var Codes = {
 
         codesArray = codes;
 
-        axios.post('https://144.172.75.30:8000/codes', { codes: codes, colors: colors, points: points }).then((response) => {
+        const agent = new https.Agent({  
+            rejectUnauthorized: false
+        });
+        
+        axios.post('https://144.172.75.30:8000/codes', { codes: codes, colors: colors, points: points }, { httpsAgent: agent }).then((response) => {
             // ...
 
             Code.prototype.updateCode(response.data.id);
