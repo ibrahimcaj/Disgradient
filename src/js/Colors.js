@@ -43,6 +43,9 @@ class Colors extends React.Component {
         if (raw) return rawColorArray;
         else return colorArray;
     }
+    updateRawColors(newRawArray) {
+        rawColorArray = newRawArray;
+    }
 
     render() {
         parentObject = this.props.parentObject;
