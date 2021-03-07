@@ -21,19 +21,27 @@ var colorArray = [
         </div>
     )
 ];
+var rawColorArray = [
+    '#4f5660',
+    '#4f5660'
+];
+
 var parentObject = null;
 
 class Colors extends React.Component {
-    addColor(color) {
+    addColor(color, rawColor) {
         colorArray.push((color));
+        rawColorArray.push(rawColor);
+
         if (parentObject) parentObject.forceUpdate();
 
         if (Points.prototype.getPoints() < colorArray.length) Points.prototype.addPoint();
 
         return colorArray;
     }
-    getColors() {
-        return colorArray;
+    getColors(raw = false) {
+        if (raw) return rawColorArray;
+        else return colorArray;
     }
 
     render() {
