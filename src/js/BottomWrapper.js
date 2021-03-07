@@ -55,8 +55,10 @@ class BottomWrapper extends React.Component {
                     </div>
                 </div>
                 <div id="information-wrapper">
-                    <div className="information-text">
-                        Created by Vanished
+                    <div class="information-text">
+                        © 2020 Vanished (vanishedvan)
+                        <br />
+                        Disgradient is not affiliated with Discord.
                     </div>
                     <div className="information-icon-wrapper">
                         <a href="https://github.com/vanishedvan">
