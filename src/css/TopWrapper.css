@@ -147,10 +147,28 @@
     color: #4F5660;
 }
 
-.main-tooltip {
-    padding: 5px !important;
-    padding-top: 5px !important;
+.generate-tooltip {
+    transition: all 0.25s !important;
+
+    padding-top: 1px !important;
+    padding-bottom: 5px !important;
     border-radius: 25px !important;
+}
+.generate-tooltip > p {
+    font-size: small;
+    margin: 0%;
+}
+
+.code-tooltip {
+    transition: all 0.25s !important;
+
+    padding-top: 1px !important;
+    padding-bottom: 5px !important;
+    border-radius: 25px !important;
+}
+.code-tooltip > p {
+    font-size: small;
+    margin: 0%;
 }
 
 [tag="clickable-item"] {
