@@ -147,6 +147,12 @@
     color: #4F5660;
 }
 
+.main-tooltip {
+    padding: 5px !important;
+    padding-top: 5px !important;
+    border-radius: 25px !important;
+}
+
 [tag="clickable-item"] {
     transition: background-color 0.25s ease;
     
