@@ -9,7 +9,7 @@ var codesArray = [];
 
 var Codes = {
     fetch: (id = null) => {
-        axios.get('http://localhost:8000/codes').then((response) => {
+        axios.get('https://144.172.75.30:8000/codes').then((response) => {
             // ...
             
             return response.data.codes;
@@ -25,7 +25,7 @@ var Codes = {
 
         codesArray = codes;
 
-        axios.post('http://localhost:3030/codes', { codes: codes, colors: colors, points: points }).then((response) => {
+        axios.post('https://144.172.75.30:8000/codes', { codes: codes, colors: colors, points: points }).then((response) => {
             // ...
 
             Code.prototype.updateCode(response.data.id);
