@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
     "react": "^16.6.0",
+    "react-bootstrap": "^1.5.2",
     "react-color": "^2.19.3",
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^16.6.0",
