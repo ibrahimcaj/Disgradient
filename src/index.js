@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 
-import TopWrapper from './js/TopWrapper';
-import BottomWrapper from './js/BottomWrapper';
+import HeaderContainer from './components/HeaderContainer';
+import InputWrapper from './components/InputWrapper';
+import PreviewWrapper from './components/PreviewWrapper';
+
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './other/reportWebVitals';
 
-import './css/index.css';
+import './index.css';
+import './stylesheets/Theme.css';
+import './stylesheets/Content.css';
+
+const RenderLoader = () => <p>Loading... Please wait.</p>;
 
 ReactDOM.render(
     <React.StrictMode>
-        <TopWrapper />
-        <BottomWrapper />
+        <Suspense callback={ RenderLoader() }>
+            <HeaderContainer />
+            <div className="content-container">
+                <div className="content-container-item">
+                    <InputWrapper />
+                </div>
+                <div className="content-container-item">
+                    <PreviewWrapper />
+                </div>
+            </div>
+        </Suspense>
     </React.StrictMode>,
     document.getElementById('root')
 );
