@@ -14,7 +14,7 @@ var UpdateColorBox = () => {
             var colorBox = colorElement.children.item(0),
                 colorInput = colorElement.children.item(1);
 
-            if (!colorInput.value.startsWith('#') && colorInput.value !== '') colorInput.value = `#${colorInput.value.slice(0, 6)}`;
+            if (!colorInput.value.startsWith('#') && colorInput.value !== '') colorInput.value = `#${colorInput.value.slice(0, 6).replace(/\W/g, '')}`;
 
             var colorToChange = (colorInput.value === '') ? '#000000' : colorInput.value;
             rawColorArray[index] = colorToChange;
