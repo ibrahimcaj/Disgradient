@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     background-color: var(--primary-background-color);
     color: #ffffff;
 
@@ -10,6 +10,14 @@ body {
 }
 input:focus, select:focus, textarea:focus, button:focus {
     outline: none;
+}
+a, a:link, a:visited {
+    text-decoration: none;
+    
+    color: var(--text-link-color);
+}
+a:hover {
+    text-decoration: underline;
 }
 
 /* Separator Stylesheet */
@@ -22,6 +30,15 @@ input:focus, select:focus, textarea:focus, button:focus {
 
     width: 2px;
     height: 30px;
+}
+
+/* NoTransition Stylesheet */
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
 }
 
 /* Scrollbar Stylesheet */

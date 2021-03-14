@@ -1,0 +1,53 @@
+.code-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+.code-wrapper-button-wrapper {
+    background-color: var(--secondary-background-color);
+    border: 3px solid var(--tertiary-background-color);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 55px;
+
+    margin: 6px;
+
+    border-radius: 50px;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+.code-wrapper-button-wrapper:hover {
+    background-color: var(--tertiary-background-color);
+}
+.code-wrapper-button-icon {
+    fill: var(--primary-icon-color);
+
+    width: 35px;
+    
+    margin: auto;
+    margin-top: +5px;
+    
+    border-radius: 50px;
+    
+    cursor: pointer;
+    overflow: hidden;
+}
+.code-wrapper-button-text {
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+    margin: auto;
+
+    color: var(--text-title-color);
+}

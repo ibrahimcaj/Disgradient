@@ -1,0 +1,57 @@
+.dark-theme {
+    --primary-background-color: #36393f;
+    --secondary-background-color: #313339;
+    --tertiary-background-color: #292b2f;
+    --quaternary-background-color: #18191c;
+
+    --text-title-color: #ffffff;
+    --text-description-color: #76797F;
+    --text-description-color-light: #9A9EA6;
+    --text-link-color: #00b0f4;
+
+    --primary-icon-color: #ffffff;
+    --secondary-icon-color: #76797F;
+
+    --preview-switch-border: #ffffff;
+    --preview-switch-background: #42454c;
+    --preview-switch-background-hover: #36393f;
+
+    --role-preview-background-color: #393d44;
+    --role-preview-button-color: #2f3136;
+    --role-preview-button-color-hover: #202225;
+    --role-preview-icon-color: #b9bbbe;
+    --role-preview-icon-color-hover: #dcddde;
+
+    --scrollbar-thumb-color: #202225;
+    --scrollbar-track-color: #2e3338;
+
+    --main-black-color: #000000;
+    --main-white-color: #ffffff;
+}
+.light-theme {
+    --primary-background-color: #ffffff;
+    --secondary-background-color: #f2f3f5;
+    --tertiary-background-color: #d4d7dc;
+    --quaternary-background-color: #4E4F52;
+
+    --text-title-color: #2e3338;
+    --text-description-color: #b7bac0;
+    --text-description-color-light: #7A7F8C;
+    --text-link-color: #00b0f4;
+
+    --primary-icon-color: #4f5660;
+    --secondary-icon-color: #2e3338;
+
+    --preview-switch-border: #4f5660;
+    --preview-switch-background: #ffffff;
+    --preview-switch-background-hover: #d4d7dc;
+
+    --role-preview-background-color: #f2f3f5;
+    --role-preview-button-color: #e3e5e8;
+    --role-preview-button-color-hover: #D7D9DB;
+    --role-preview-icon-color: #4f5660;
+    --role-preview-icon-color-hover: #2e3338;
+
+    --scrollbar-thumb-color: #d4d7dc;
+    --scrollbar-track-color: #f2f3f5;
+}
