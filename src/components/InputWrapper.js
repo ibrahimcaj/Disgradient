@@ -38,7 +38,7 @@ class InputWrapper extends React.Component {
                     <p className="input-wrapper-description">
                         Your code you can use to create gradient roles in your Discord server 
                         <br />
-                        with our <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Discord bot</a>! Click below to generate your code. To copy it, 
+                        with our <a href="https://discord.com/api/oauth2/authorize?client_id=725639183246557254&permissions=0&scope=bot%20applications.commands">Discord bot</a>! Click below to generate your code. To copy it, 
                         <br />
                         click the button again.
                     </p>
