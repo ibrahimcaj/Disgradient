@@ -26,6 +26,11 @@ class GradientManager extends React.Component {
         this.setState = this.setState.bind(this);
     }
 
+    getGradients() {
+        // ...
+
+        return currentComponent.state.gradientArray;
+    }
     generateGradient() {
         // ...
         
@@ -42,6 +47,7 @@ class GradientManager extends React.Component {
 
         currentComponent.setState(() => ({ gradientArray: gradientArray }));
     }
+    
     render() {
         // ...
 
