@@ -60,7 +60,7 @@ class ColorsManager extends React.Component {
     }
     updateColors(newColorArray) {
         // ...
-
+        console.log(newColorArray)
         currentComponent.setState((stateObject) => ({
             colorArray: newColorArray
         }));
@@ -72,7 +72,7 @@ class ColorsManager extends React.Component {
         // ...
 
         var colorArray = [];
-
+        
         currentComponent.state.colorArray.forEach((hexColor) => {
             colorArray.push(
                 <div className="colors-wrapper-item" key={ colorArray.length }>
