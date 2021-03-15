@@ -45,10 +45,10 @@
 }
 .role-preview-wrapper-role-name {
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 500;
 
     color: var(--text-title-color);
-    margin-right: 110px;
+    margin-right: 80px;
 }
 .role-preview-wrapper-member {
     display: flex;
