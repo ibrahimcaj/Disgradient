@@ -46,7 +46,7 @@ class InputWrapper extends React.Component {
                 </div>
                 <div className="input-wrapper-item">
                     <p className="input-wrapper-copyright">
-                        © 2020/21 Vanished (vanishedvan)
+                        © 2020/21 Vanished (<a href="https://github.com/vanishedvan">GitHub</a>)
                     </p>
                     <p className="input-wrapper-note">
                         Disgradient is not affiliated with Discord.
