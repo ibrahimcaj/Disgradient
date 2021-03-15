@@ -8,7 +8,8 @@ import PreviewWrapper from './components/PreviewWrapper';
 import ColorsManager from './utility/ColorsManager.js';
 import PointsManager from './utility/PointsManager.js';
 import CodeManager from './utility/CodeManager.js';
-import GradientManager from './utility/GradientManager';
+import GradientManager from './utility/GradientManager.js';
+import UpdateColorValue from './utility/UpdateColorValue.js';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './other/reportWebVitals';
@@ -31,6 +32,8 @@ if (URLParameters.get('code')) {
             
             CodeManager.prototype.setCode(codeObject.id);
             GradientManager.prototype.generateGradient();
+
+            UpdateColorValue();
         }
     });
 }
