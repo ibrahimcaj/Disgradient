@@ -22,15 +22,18 @@ const RenderLoader = () => <p>Loading... Please wait.</p>;
 // ---
 
 const URLParameters = new URLSearchParams(window.location.search);
-CodeManager.prototype.fetchCodes(URLParameters.get('code')).then((codeObject) => {
-    if (codeObject) {
-        ColorsManager.prototype.updateColors(codeObject.colors);
-        PointsManager.prototype.setPointAmount(codeObject.points);
-        
-        CodeManager.prototype.setCode(codeObject.id);
-        GradientManager.prototype.generateGradient();
-    }
-});
+
+if (URLParameters.get('code')) {
+    CodeManager.prototype.fetchCodes(URLParameters.get('code')).then((codeObject) => {
+        if (codeObject) {
+            ColorsManager.prototype.updateColors(codeObject.colors);
+            PointsManager.prototype.setPointAmount(codeObject.points);
+            
+            CodeManager.prototype.setCode(codeObject.id);
+            GradientManager.prototype.generateGradient();
+        }
+    });
+}
 
 // ---
 
