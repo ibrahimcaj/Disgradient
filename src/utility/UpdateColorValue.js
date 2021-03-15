@@ -1,3 +1,5 @@
+import rgb2hex from 'rgb2hex';
+
 var UpdateColorValue = () => {
     var inputWrapper = document.getElementsByClassName('input-wrapper').item(0).children.item(0).children.item(2);
     
@@ -7,10 +9,13 @@ var UpdateColorValue = () => {
         const colorElement = inputWrapper.children.item(index);
 
         if (colorElement.children.item(0)) {
-            var colorInput = colorElement.children.item(1),
-                colorToChange = (colorInput.value === '') ? '#000000' : colorInput.value;
-
-            colorInput = colorToChange;
+            var colorBox = colorElement.children.item(0),
+                colorInput = colorElement.children.item(1),
+                colorToChange = (colorBox.getAttribute('style') === '') ? '#000000' : colorBox.getAttribute('style').replace('background-color: ', '').replace(';', '');
+            
+            colorToChange = rgb2hex(colorToChange).hex;
+            
+            colorInput.value = colorToChange;
         }
     }
 }
