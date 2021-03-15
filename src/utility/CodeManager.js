@@ -25,14 +25,16 @@ class CodeManager extends React.Component {
         this.setState = this.setState.bind(this);
     }
 
-    fetchCodes() {
+    fetchCodes(id) {
         // ...
 
-        axios.get('https://144.172.75.30:8000/codes').then((responseObject) => {
-            // ...
-            
-            return responseObject.data.codes;
-        }).catch(console.error);
+        return new Promise((resolve, reject) => {
+            axios.get(`https://144.172.75.30:8000/codes/${id}`).then((responseObject) => {
+                // ...
+                
+                resolve(responseObject.data.codes);
+            }).catch(console.error);
+        });
     }
     insertCode() {
         // ...
@@ -60,6 +62,12 @@ class CodeManager extends React.Component {
             
             return responseObject.data;
         }).catch(console.error);
+    }
+    setCode(newCode) {
+        // ...
+
+        currentComponent.setState(() => ({ currentCode: newCode }));
+        return currentComponent.state.currentCode;
     }
 
     render() {
