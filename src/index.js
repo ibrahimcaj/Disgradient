@@ -5,6 +5,11 @@ import HeaderContainer from './components/HeaderContainer';
 import InputWrapper from './components/InputWrapper';
 import PreviewWrapper from './components/PreviewWrapper';
 
+import ColorsManager from './utility/ColorsManager.js';
+import PointsManager from './utility/PointsManager.js';
+import CodeManager from './utility/CodeManager.js';
+import GradientManager from './utility/GradientManager';
+
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './other/reportWebVitals';
 
@@ -13,6 +18,21 @@ import './stylesheets/Theme.css';
 import './stylesheets/Content.css';
 
 const RenderLoader = () => <p>Loading... Please wait.</p>;
+
+// ---
+
+const URLParameters = new URLSearchParams(window.location.search);
+CodeManager.prototype.fetchCodes(URLParameters.get('code')).then((codeObject) => {
+    if (codeObject) {
+        ColorsManager.prototype.updateColors(codeObject.colors);
+        PointsManager.prototype.setPointAmount(codeObject.points);
+        
+        CodeManager.prototype.setCode(codeObject.id);
+        GradientManager.prototype.generateGradient();
+    }
+});
+
+// ---
 
 ReactDOM.render(
     <React.StrictMode>
