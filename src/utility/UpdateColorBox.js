@@ -20,7 +20,7 @@ var UpdateColorBox = () => {
             rawColorArray[index] = colorToChange;
             colorBox.setAttribute('style', `background-color: ${colorToChange};`);
 
-            colorInput.value = colorInput.value;
+            colorInput.value = colorToChange;
         }
     }
 
