@@ -32,7 +32,7 @@ class CodeManager extends React.Component {
             axios.get(`https://144.172.75.30:8000/codes/${id}`).then((responseObject) => {
                 // ...
                 
-                resolve(responseObject.data.codes);
+                resolve(responseObject.data);
             }).catch(console.error);
         });
     }
