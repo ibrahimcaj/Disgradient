@@ -19,8 +19,6 @@ var UpdateColorBox = () => {
             var colorToChange = (colorInput.value === '') ? '#000000' : colorInput.value;
             rawColorArray[index] = colorToChange;
             colorBox.setAttribute('style', `background-color: ${colorToChange};`);
-
-            colorInput.value = colorToChange;
         }
     }
 
