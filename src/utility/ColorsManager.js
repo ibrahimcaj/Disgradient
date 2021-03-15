@@ -60,8 +60,8 @@ class ColorsManager extends React.Component {
     }
     updateColors(newColorArray) {
         // ...
-        
-        currentComponent.setState((stateObject) => ({
+
+        currentComponent.setState(() => ({
             colorArray: newColorArray
         }));
 
