@@ -1,6 +1,7 @@
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import axios from 'axios';
+import https from 'https';
 
 import PointsManager from './PointsManager.js';
 import ColorsManager from '../utility/ColorsManager.js';
