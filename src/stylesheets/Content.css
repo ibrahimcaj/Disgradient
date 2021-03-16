@@ -1,11 +1,15 @@
 .content-container {
+    max-height: calc(100% - 48px);
+
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    flex: 1 1 0%;
 }
 .content-container-item {
-    width: 50%;
+    flex: 1 1 0%;
+    height: 100%;
 
-    margin-left: auto;
-    margin-right: auto;
+    overflow-y: scroll;
 }
