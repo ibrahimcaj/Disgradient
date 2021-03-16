@@ -33,7 +33,7 @@ class CodeManager extends React.Component {
             const Agent = new https.Agent({  
                 rejectUnauthorized: false
             });
-            axios.get(`https://144.172.75.30:8000/codes/${id}`, { httpsAgent: Agent }).then((responseObject) => {
+            axios.get(`https://disgradient-api.vanished.live/codes/${id}`, { httpsAgent: Agent }).then((responseObject) => {
                 // ...
                 
                 resolve(responseObject.data);
@@ -58,7 +58,7 @@ class CodeManager extends React.Component {
         const Agent = new https.Agent({  
             rejectUnauthorized: false
         });
-        axios.post('https://144.172.75.30:8000/codes', {
+        axios.post('https://disgradient-api.vanished.live/codes', {
             colors: colorArray,
             points: pointsAmount,
             codes: outputArray
