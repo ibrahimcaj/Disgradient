@@ -45,7 +45,7 @@ ReactDOM.render(
         <Suspense callback={ RenderLoader() }>
             <HeaderContainer />
             <div className="content-container">
-                <div className="content-container-item">
+                <div className="content-container-item" style={{ backgroundColor: 'var(--secondary-background-color)' }}>
                     <InputWrapper />
                 </div>
                 <div className="content-container-item">

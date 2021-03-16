@@ -11,7 +11,7 @@ import '../stylesheets/InputWrapper.css';
 class InputWrapper extends React.Component {
     render() {
         return (
-            <div className="input-wrapper" style={{ backgroundColor: 'var(--secondary-background-color)' }}>
+            <div className="input-wrapper">
                 <div className="input-wrapper-item">
                     <p className="input-wrapper-title">
                         Colors
