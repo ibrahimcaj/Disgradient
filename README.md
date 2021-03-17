@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://disgradient.vanished.rocks">
-        <img src="https://disgradient.vanished.rocks/static/media/logo.48dd97c4.png" width="350px" />
+        <img src="https://disgradient.vanished.rocks/assets/logo192.png" width="350px" />
     </a>
 </p>
 <p align="center">
