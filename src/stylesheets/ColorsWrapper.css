@@ -52,7 +52,7 @@
     color: var(--text-title-color);
 }
 .colors-wrapper-item-input-color {
-    background-color: var(--main-white-color);
+    background-color: var(--main-black-color);
 
     width: 20px;
     height: 20px;
