@@ -4,6 +4,8 @@ import PointsManager from './PointsManager.js';
 import GradientManager from './GradientManager.js';
 import UpdateColorBox from './UpdateColorBox.js';
 
+import ColorPicker from './ColorPicker.js';
+
 var currentComponent = null;
 
 class ColorsManager extends React.Component {
@@ -14,7 +16,8 @@ class ColorsManager extends React.Component {
             colorArray: [
                 '#000000',
                 '#000000'
-            ]
+            ],
+            displayColorPicker: false
         };
         currentComponent = this;
 
@@ -77,7 +80,10 @@ class ColorsManager extends React.Component {
             colorArray.push(
                 <div className="colors-wrapper-item" key={ colorArray.length }>
                     <div className="colors-wrapper-item-color" style={{ backgroundColor: hexColor }}></div>
-                    <input className="colors-wrapper-item-input" onChange={ () => { UpdateColorBox(); GradientManager.prototype.generateGradient(); } } placeholder="#000000" maxLength="7" />
+                    <div className="colors-wrapper-item-input-wrapper">
+                        <input className="colors-wrapper-item-input" onChange={ () => { UpdateColorBox(); GradientManager.prototype.generateGradient(); } } placeholder="#000000" maxLength="7" />
+                        <ColorPicker />
+                    </div>
                 </div>
             );
         });
