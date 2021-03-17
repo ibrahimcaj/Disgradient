@@ -22,6 +22,10 @@ const RenderLoader = () => <p>Loading... Please wait.</p>;
 
 // ---
 
+CodeManager.prototype.fetchInformation().catch(console.error);
+
+// ---
+
 const URLParameters = new URLSearchParams(window.location.search);
 
 if (URLParameters.get('code')) {

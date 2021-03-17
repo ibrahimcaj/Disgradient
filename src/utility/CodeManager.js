@@ -26,6 +26,20 @@ class CodeManager extends React.Component {
         this.setState = this.setState.bind(this);
     }
 
+    fetchInformation() {
+        // ...
+
+        return new Promise((resolve, reject) => {
+            const Agent = new https.Agent({  
+                rejectUnauthorized: false
+            });
+            axios.get(`https://disgradient-api.vanished.live/info`, { httpsAgent: Agent }).then(() => {
+                // ...
+                
+                resolve();
+            }).catch(console.error);
+        });
+    }
     fetchCodes(id) {
         // ...
 
