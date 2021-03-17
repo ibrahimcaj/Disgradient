@@ -18,9 +18,9 @@ export const ColorPicker = () => {
     };
 
     return (
-        <div className="colors-wrapper-item-input-color" style={{ zIndex: '2' }} onClick={ handleClick }>
+        <div className="colors-wrapper-item-input-color" style={{ zIndex: '2' }} onClick={ handleClick } onMouseDown={ handleClose }>
             <div style={{ width: '15px' }}>
-                { (showColorPicker) ? (<ColorPalette width={150} height={100} color={color} onChange={handleChange} hideHSB dark />) : null }
+                { (showColorPicker) ? (<ColorPalette width={ 150 } height={ 100 } color={ color } onChange={ handleChange } hideHSB dark />) : null }
             </div>
         </div>
     );
