@@ -4,7 +4,7 @@ import PointsManager from './PointsManager.js';
 import GradientManager from './GradientManager.js';
 import UpdateColorBox from './UpdateColorBox.js';
 
-import ColorPicker from './ColorPicker.js';
+// import ColorPicker from './ColorPicker.js';
 
 var currentComponent = null;
 
