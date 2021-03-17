@@ -23,6 +23,10 @@
     width: 150px;
     height: 65px;
 }
+.colors-wrapper-item-input-wrapper {
+    display: flex;
+    flex-direction: row;
+}
 .colors-wrapper-item-color {
     background-color: var(--main-black-color);
 
@@ -35,7 +39,7 @@
 .colors-wrapper-item-input {
     background-color: var(--tertiary-background-color);
 
-    width: 120px;
+    width: 100px;
     height: 20px;
     margin: 5px;
 
@@ -46,6 +50,18 @@
     text-align: center;
     font-weight: 500;
     color: var(--text-title-color);
+}
+.colors-wrapper-item-input-color {
+    background-color: var(--main-white-color);
+
+    width: 20px;
+    height: 20px;
+    
+    margin: auto;
+    margin-right: 5px;
+
+    cursor: pointer;
+    border-radius: 25px;
 }
 .colors-wrapper-item-input::placeholder {
     text-align: center;
