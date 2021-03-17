@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChromePicker } from 'react-color';
+//import { ChromePicker } from 'react-color';
 
 var currentComponent = null;
 
