@@ -82,7 +82,7 @@ class ColorsManager extends React.Component {
                     <div className="colors-wrapper-item-color" style={{ backgroundColor: hexColor }}></div>
                     <div className="colors-wrapper-item-input-wrapper">
                         <input className="colors-wrapper-item-input" onChange={ () => { UpdateColorBox(); GradientManager.prototype.generateGradient(); } } placeholder="#000000" maxLength="7" />
-                        <ColorPicker />
+                        <div className="colors-wrapper-item-input-color"></div>
                     </div>
                 </div>
             );

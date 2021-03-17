@@ -1,41 +1,28 @@
 import React from 'react';
-import { ChromePicker } from 'react-color';
+import ColorPalette, { useColor } from 'react-color-palette';
 
-var currentComponent = null;
+export const ColorPicker = () => {
+    const [color, setColor] = useColor("hex", "#121212");
 
-class ColorPicker extends React.Component {
-    constructor(props) {
-        super(props);
+    var showColorPicker = false;
     
-        this.state = {
-            background: '#fff',
-            displayColorPicker: false
-        };
-        currentComponent = this;
-
-        this.setState = this.setState.bind(this);
+    var handleChange = (newColor) => {
+        setColor(newColor);
     }
 
-    handleChange = (color) => {
-        currentComponent.setState({ background: color.hex });
+    var handleClick = () => {
+        showColorPicker = true;
     };
-    handleChangeComplete = (color) => {
-        currentComponent.setState({ background: color.hex });
-    };
-
-    handleClick = () => {
-        currentComponent.setState({ displayColorPicker: true });
-    };
-    handleClose = () => {
-        currentComponent.setState({ displayColorPicker: false });
+    var handleClose = () => {
+        showColorPicker = false;
     };
 
-    render() {
-        // ...
-
-        return (
-            <div className="colors-wrapper-item-input-color"></div>
-        );
-    }
-}
+    return (
+        <div className="colors-wrapper-item-input-color" style={{ zIndex: '2' }} onClick={ handleClick }>
+            <div style={{ width: '15px' }}>
+                { (showColorPicker) ? (<ColorPalette width={150} height={100} color={color} onChange={handleChange} hideHSB dark />) : null }
+            </div>
+        </div>
+    );
+};
 export default ColorPicker;
