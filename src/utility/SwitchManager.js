@@ -74,7 +74,7 @@ class PointsManager extends React.Component {
                 <p className="preview-wrapper-description">
                     The Discord Folder and Role previews of your generated gradient.
                     <br />
-                    Click on one of the items to copy it's HEX color.
+                    Click on one of the items to copy its HEX color.
                 </p>
                 <div className="preview-wrapper-item" onClick={ () => GradientManager.prototype.generateGradient() }>
                     { switchElement }
