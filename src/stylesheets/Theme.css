@@ -22,6 +22,8 @@
     --role-preview-icon-color: #b9bbbe;
     --role-preview-icon-color-hover: #dcddde;
 
+    --folder-background-color: #202225;
+
     --scrollbar-thumb-color: #202225;
     --scrollbar-track-color: #2e3338;
 
@@ -52,6 +54,11 @@
     --role-preview-icon-color: #4f5660;
     --role-preview-icon-color-hover: #2e3338;
 
+    --folder-background-color: #e3e5e8;
+
     --scrollbar-thumb-color: #d4d7dc;
     --scrollbar-track-color: #f2f3f5;
+
+    --main-black-color: #000000;
+    --main-white-color: #ffffff;
 }
