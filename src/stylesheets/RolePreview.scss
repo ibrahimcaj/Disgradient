@@ -64,9 +64,6 @@
     color: var(--role-preview-icon-color);
     margin-right: 2.5px;
 }
-.role-preview-wrapper-member-amount:hover {
-    color: var(--role-preview-icon-color-hover);
-}
 .role-preview-wrapper-member-icon {
     fill: var(--role-preview-icon-color);
 
@@ -77,6 +74,9 @@
 }
 .role-preview-wrapper-member-icon:hover {
     fill: var(--role-preview-icon-color-hover);
+}
+.role-preview-wrapper-member-amount:hover {
+    color: var(--role-preview-icon-color-hover);
 }
 .role-preview-wrapper-button {
     background-color: var(--role-preview-button-color);
@@ -95,14 +95,15 @@
 
     border-radius: 50px;
 }
-.role-preview-wrapper-button:hover {
-    background-color: var(--role-preview-button-color-hover);
-}
 .role-preview-wrapper-button-icon {
     fill: var(--role-preview-icon-color);
 
     width: 16px;
 }
-.role-preview-wrapper-button-icon:hover {
-    fill: var(--role-preview-icon-color-hover);
+.role-preview-wrapper-button:hover {
+    background-color: var(--role-preview-button-color-hover);
+
+    .role-preview-wrapper-button-icon {
+        fill: var(--role-preview-icon-color-hover);
+    }
 }

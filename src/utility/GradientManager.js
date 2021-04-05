@@ -7,7 +7,7 @@ import PointsManager from './PointsManager.js';
 import SwitchManager from './SwitchManager.js';
 
 import '../stylesheets/FolderPreview.css';
-import '../stylesheets/RolePreview.css';
+import '../stylesheets/RolePreview.scss';
 
 var currentComponent = null;
 
