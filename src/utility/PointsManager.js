@@ -24,7 +24,7 @@ class PointsManager extends React.Component {
     addPointAmount() {
         // ...
 
-        if (currentComponent.state.pointsAmount >= 50) return currentComponent.state.pointsAmount;
+        if (currentComponent.state.pointsAmount >= 100) return currentComponent.state.pointsAmount;
         else if (currentComponent.state.pointsAmount === 1) return currentComponent.state.pointsAmount;
         else {
             currentComponent.setState((stateObject) => ({ pointsAmount: stateObject.pointsAmount + 1 }));
