@@ -3,6 +3,7 @@ import React from 'react';
 import PointsManager from './PointsManager.js';
 import GradientManager from './GradientManager.js';
 import UpdateColorBox from './UpdateColorBox.js';
+import ColorPicker from './ColorPicker.js';
 
 // import ColorPicker from './ColorPicker.js';
 
@@ -70,19 +71,32 @@ class ColorsManager extends React.Component {
 
         return currentComponent.state.colorArray;
     }
+    updateColorsIndex(colorIndex, colorValue) {
+        // ...
+        
+        var newColorArray = currentComponent.state.colorArray;
+            newColorArray[colorIndex] = colorValue;
+
+        currentComponent.setState(() => ({
+            colorArray: newColorArray
+        }));
+
+        return currentComponent.state.colorArray;
+    }
 
     render() {
         // ...
 
         var colorArray = [];
         
-        currentComponent.state.colorArray.forEach((hexColor) => {
+        currentComponent.state.colorArray.forEach((hexColor, hexIndex) => {
             colorArray.push(
-                <div className="colors-wrapper-item" key={ colorArray.length }>
+                <div className="colors-wrapper-item" key={ colorArray.length.toString() }>
                     <div className="colors-wrapper-item-color" style={{ backgroundColor: hexColor }}></div>
                     <div className="colors-wrapper-item-input-wrapper">
                         <input className="colors-wrapper-item-input" onChange={ () => { UpdateColorBox(); GradientManager.prototype.generateGradient(); } } placeholder="#000000" maxLength="7" />
-                        <div className="colors-wrapper-item-input-color"></div>
+                        {/* <div className="colors-wrapper-item-input-color"></div> */}
+                        <ColorPicker color={hexColor} id={hexIndex.toString()} />
                     </div>
                 </div>
             );
