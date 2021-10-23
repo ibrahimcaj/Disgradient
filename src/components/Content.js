@@ -15,7 +15,7 @@ class Content extends React.Component {
         super(props);
 
         this.state = {
-            colors: ['#5865f2', '#7289da'],
+            colors: ['#000000', '#000000'],
             points: 2
         };
     }
