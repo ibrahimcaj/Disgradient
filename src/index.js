@@ -1,66 +1,40 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 
-import HeaderContainer from './components/HeaderContainer';
-import InputWrapper from './components/InputWrapper';
-import PreviewWrapper from './components/PreviewWrapper';
-
-import ColorsManager from './utility/ColorsManager.js';
-import PointsManager from './utility/PointsManager.js';
-import CodeManager from './utility/CodeManager.js';
-import GradientManager from './utility/GradientManager.js';
-import UpdateColorValue from './utility/UpdateColorValue.js';
+import Header from './components/Header';
+import Content from './components/Content';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './other/reportWebVitals';
 
 import './index.css';
-import './stylesheets/Theme.css';
-import './stylesheets/Content.css';
 
 const RenderLoader = () => <p>Loading... Please wait.</p>;
 
-// ---
+// eslint-disable-next-line no-extend-native
+Array.prototype.move = function(oldIndex, newIndex) {
+    if (oldIndex >= this.length) {
+        var k = newIndex - this.length + 1;
 
-CodeManager.prototype.fetchInformation().catch(console.error);
-
-// ---
-
-const URLParameters = new URLSearchParams(window.location.search);
-
-if (URLParameters.get('code')) {
-    CodeManager.prototype.fetchCodes(URLParameters.get('code')).then((codeObject) => {
-        if (codeObject) {
-            ColorsManager.prototype.updateColors(codeObject.colors);
-            PointsManager.prototype.setPointAmount(codeObject.points);
-            
-            CodeManager.prototype.setCode(codeObject.id);
-            GradientManager.prototype.generateGradient();
-
-            UpdateColorValue();
+        while (k--) {
+            this.push(undefined);
         }
-    });
-}
-
-// ---
+    }
+    
+    this.splice(newIndex, 0, this.splice(oldIndex, 1)[0]);
+    return this;
+};
 
 ReactDOM.render(
     <React.StrictMode>
         <Suspense callback={ RenderLoader() }>
-            <HeaderContainer />
-            <div className="content-container">
-                <div className="content-container-item" style={{ backgroundColor: 'var(--secondary-background-color)', borderBottomRightRadius: '15px' }}>
-                    <InputWrapper />
-                </div>
-                <div className="content-container-item">
-                    <PreviewWrapper />
-                </div>
-            </div>
+            <Header />
+
+            <Content />
         </Suspense>
     </React.StrictMode>,
-    document.getElementById('root')
+    document.body
 );
 
 serviceWorkerRegistration.register();
-
 reportWebVitals();
