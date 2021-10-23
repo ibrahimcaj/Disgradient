@@ -24,7 +24,7 @@
     background-color: var(--background-tertiary);
     border-radius: 0 20px 20px 20px;
 
-    transition: background-color .2s ease;
+    transition: background-color .2s ease, border .2s ease;
 
     box-sizing: border-box;
     margin-bottom: 12.5px;
@@ -35,8 +35,6 @@
     align-items: center;
     justify-content: space-between;
     align-content: center;
-
-    transition: border .2s ease;
 }
 .color-item:hover {
     background-color: var(--background-quinary);
