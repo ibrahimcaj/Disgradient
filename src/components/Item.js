@@ -3,7 +3,7 @@ import React from 'react';
 import '../index.css';
 import '../stylesheets/Output.css';
 
-class OutputItem extends React.Component {
+class Item extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -44,4 +44,4 @@ class OutputItem extends React.Component {
         );
     }
 }
-export default OutputItem;
+export default Item;
