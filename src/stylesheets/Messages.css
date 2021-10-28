@@ -29,6 +29,7 @@
 
     transition: color .2s ease;
 
+    font-family: Whitney;
     font-size: 16px;
     font-weight: normal;
     color: #845EC2;
@@ -42,6 +43,7 @@
 
     cursor: default;
 
+    font-family: Whitney;
     font-size: 12px;
     font-weight: normal;
     color: #72767D;
@@ -50,12 +52,12 @@
 .message-content {
     max-width: 150px;
     margin: 0px;
-    font-family: Whitney;
 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
+    font-family: Whitney;
     font-size: 16px;
     font-weight: normal;
     color: #DCDDDE;
