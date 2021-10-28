@@ -3,6 +3,7 @@ import SmoothList from 'react-smooth-list';
 
 import Item from './Item';
 import Folder from './Folder';
+import Message from './Message';
 
 import '../index.css';
 import '../stylesheets/Output.css';
@@ -45,6 +46,22 @@ class Output extends React.Component {
                     </div>
                 );
                 break;
+            case 'message':
+                outputList = (
+                    <div className="output-folders-container">
+                        <div class="output-folders-item">
+                            <SmoothList>
+                                {this.props.colors.map((color, index) => <Message color={color} index={index} theme={'#2f3136'} />)}
+                            </SmoothList>
+                        </div>
+                        <div class="output-folders-item">
+                            <SmoothList>
+                                {this.props.colors.map((color, index) => <Message color={color} index={index} theme={'#f2f3f5'} />)}
+                            </SmoothList>
+                        </div>
+                    </div>
+                );
+                break;
             default:
                 outputList = (
                     <div className="output-list-container">
@@ -79,7 +96,7 @@ class Output extends React.Component {
                             <path d="M23.3083 4.30319H13.3083L11.4996 1.93569C11.0759 1.08819 10.2096 0.553192 9.26335 0.553192H2.05835C1.3671 0.553192 0.80835 1.11194 0.80835 1.80319V19.3032C0.80835 20.6832 1.9271 21.8032 3.30835 21.8032H23.3083C24.6883 21.8032 25.8083 20.6832 25.8083 19.3032V6.80319C25.8083 5.42319 24.6883 4.30319 23.3083 4.30319Z" />
                         </svg>
                     </div>
-                    <div className="output-button" style={{ cursor: 'not-allowed', backgroundColor: 'var(--button-background-hover)', border: '3.5px solid var(--button-background-hover)' }}>
+                    <div className={this.state.type === 'message' ? "output-button output-button-selected" : "output-button"} onClick={() => this.setState({ type: 'message' })}>
                         <svg viewBox="0 0 25 21" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 10.4255C12.7575 10.4255 15 8.18179 15 5.42551C15 2.66926 12.7575 0.425507 10 0.425507C7.2425 0.425507 5 2.66926 5 5.42551C5 8.18179 7.24375 10.4255 10 10.4255Z" />
                             <path d="M10 11.6755C4.1125 11.6755 0 14.7593 0 19.1755V20.4255H20V19.1755C20 14.7593 15.8888 11.6755 10 11.6755Z" />
