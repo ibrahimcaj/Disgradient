@@ -48,15 +48,15 @@ class Output extends React.Component {
                 break;
             case 'message':
                 outputList = (
-                    <div className="output-folders-container">
-                        <div class="output-folders-item">
+                    <div className="output-messages-container">
+                        <div class="output-messages-item">
                             <SmoothList>
-                                {this.props.colors.map((color, index) => <Message color={color} index={index} theme={'#2f3136'} />)}
+                                {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
                             </SmoothList>
                         </div>
-                        <div class="output-folders-item">
+                        <div class="output-messages-item">
                             <SmoothList>
-                                {this.props.colors.map((color, index) => <Message color={color} index={index} theme={'#f2f3f5'} />)}
+                                {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
                             </SmoothList>
                         </div>
                     </div>
