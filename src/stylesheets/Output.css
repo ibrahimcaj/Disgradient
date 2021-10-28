@@ -1,0 +1,54 @@
+.output-container {
+    width: auto;
+    height: auto;
+
+    box-sizing: border-box;
+    margin-top: 25px;
+    padding: 10px;
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    align-content: center;
+    gap: 10px;
+
+    border-radius: 100px;
+    background-color: var(--background-tertiary);
+}
+.output-button {
+    width: 40px;
+    height: 40px;
+
+    transition: color .2s ease, background-color .2s ease, border .2s ease;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border-radius: 100%;
+    
+    border: 3.5px solid var(--button-background-default);
+
+    background-color: var(--button-background-default);
+}
+.output-button-selected {
+    border: 3.5px solid var(--icon-color);
+}
+.output-button > svg {
+    width: 24px;
+    height: 24px;
+
+    fill: var(--icon-color);
+}
+.output-button:hover {
+    background-color: var(--button-background-hover);
+    border: 3.5px solid var(--button-background-hover);
+}
+.output-button-selected:hover {
+    background-color: var(--button-background-hover);
+    border: 3.5px solid var(--icon-color);
+}

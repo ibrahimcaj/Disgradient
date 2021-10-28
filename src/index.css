@@ -1,47 +1,102 @@
-body {
-    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
-    background-color: var(--primary-background-color);
-    color: #ffffff;
+:root {
+    --background-primary: #202225;
+    --background-secondary: #292b2f;
+    --background-tertiary: #36393f;
+    --background-quaternary: #40444b;
+    --background-quinary: #3a3e44;
 
-    margin: 0%;
-    padding: 0%;
+    --button-background-default: #202225;
+    --button-background-hover: #2C2F33;
 
-    overflow-x: hidden;
+    --text-color: #ffffff;
+    --icon-color: #ffffff;
+    
+    --input-color: #DCDDDE;
+    --input-hover: #303338;
+    --input-focus: #00AFF4;
+
+    --scrollbar-thumb-color: #202225;
+    --scrollbar-thumb-color-secondary: #36393f;
+    --scrollbar-track-color: #2e3338;
+    --scrollbar-track-color-secondary: #292b2f;
+
+    --success-color: #3ba45c;
+    /* --add-color: #00aff4; */
+    --add-color: #3ba45c;
+    --remove-color: #ff4d4d;
 }
-input:focus, select:focus, textarea:focus, button:focus {
+
+@font-face {
+    font-family: Ginto;
+    src: url(./fonts/otf/ginto-bold.otf),
+    url(./fonts/ttf/ginto-bold.ttf),
+    url(./fonts/woff/ginto-bold.woff),
+    url(./fonts/woff2/ginto-bold.woff2);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Ginto;
+    src: url(./fonts/otf/ginto-medium.otf),
+    url(./fonts/ttf/ginto-medium.ttf),
+    url(./fonts/woff/ginto-medium.woff),
+    url(./fonts/woff2/ginto-medium.woff2);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Ginto;
+    src: url(./fonts/otf/ginto-regular.otf),
+    url(./fonts/ttf/ginto-regular.ttf),
+    url(./fonts/woff/ginto-regular.woff),
+    url(./fonts/woff2/ginto-regular.woff2);
+    font-weight: lighter;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+
+    background-color: var(--background-primary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    font-family: Ginto;
+}
+p {
+    font-family: Ginto;
+    font-weight: normal;
+    color: var(--text-color);
+}
+textarea:focus, input:focus{
     outline: none;
 }
-a, a:link, a:visited {
-    text-decoration: none;
-    
-    color: var(--text-link-color);
-}
-a:hover {
-    text-decoration: underline;
-}
 
-/* Separator Stylesheet */
+/* UTILITY */
 
-.horizontal-separator {
-    background-color: var(--tertiary-background-color);
-
-    margin-left: 10px;
-    margin-right: 10px;
-
-    width: 2px;
-    height: 30px;
+.box {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
-/* NoTransition Stylesheet */
+/* MEDIA */
 
-.notransition {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
+@media only screen and (max-width: 1080px) {
+    body {
+        zoom: 90%;
+    }
 }
 
-/* Scrollbar Stylesheet */
+/* SCROLL */
 
 ::-webkit-scrollbar {
     height: 16px;
@@ -62,5 +117,31 @@ a:hover {
     border: 4px solid transparent;
     border-radius: 8px;
     margin-bottom: 8px;
+    margin-top: 10px;
+    background-clip: padding-box;
+}
+
+body::-webkit-scrollbar {
+    height: 16px;
+    width: 16px;
+
+    /* background-color: var(--scrollbar-thumb-color-secondary); */
+}
+body::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color-secondary);
+    border: 4px solid transparent;
+    border-radius: 8px;
+    min-height: 40px;
+    background-clip: padding-box;
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color-secondary);
+    border: 4px solid transparent;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    margin-top: 10px;
     background-clip: padding-box;
 }

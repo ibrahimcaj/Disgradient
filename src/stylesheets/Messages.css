@@ -1,0 +1,111 @@
+.output-messages-container {
+    width: 90%;
+    height: auto;
+
+    margin-top: 25px;
+    display: flex;
+}
+.output-messages-item {
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.output-messages-item:first-child {
+    border-radius: 30px 0px 0px 30px;
+    background-color: #36393f;
+}
+.output-messages-item:first-child > div > div > .message-item > div > div > .message-date {
+    color: #72767d;
+}
+.output-messages-item:first-child > div > div > .message-item > div > .message-content {
+    color: #dcddde;
+}
+
+.output-messages-item:last-child {
+    border-radius: 0px 30px 30px 0px;
+    background-color: #ffffff;
+}
+.output-messages-item:last-child > div > div > .message-item > div > div > .message-date {
+    color: #747f8d;
+}
+.output-messages-item:last-child > div > div > .message-item > div > .message-content {
+    color: #2e3338;
+}
+
+.message-item {
+    width: 215px;
+    height: auto;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+.message-item > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+
+    cursor: pointer;
+
+    background-size: contain;
+    border-radius: 50%;
+}
+.message-avatar:hover {
+    filter: drop-shadow(0 4px 4px rgba(128, 94, 94, 0.16));
+}
+
+.message-author {
+    margin: 0px;
+    cursor: pointer;
+
+    transition: color .2s ease;
+
+    font-family: Whitney;
+    font-size: 16px;
+    font-weight: normal;
+    color: #845EC2;
+}
+.message-author:hover {
+    text-decoration: underline;
+}
+.message-date {
+    margin: 0px;
+    margin-left: 5px;
+
+    cursor: default;
+
+    font-family: Whitney;
+    font-size: 12px;
+    font-weight: normal;
+    color: #72767D;
+}
+
+.message-content {
+    max-width: 150px;
+    margin: 0px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-family: Whitney;
+    font-size: 16px;
+    font-weight: normal;
+    color: #DCDDDE;
+}
