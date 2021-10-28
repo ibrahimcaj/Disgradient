@@ -3,6 +3,7 @@ import React from 'react';
 import Wumpus from '../icons/wumpus.png';
 
 import '../index.css';
+import '../stylesheets/Whitney.css';
 import '../stylesheets/Messages.css';
 
 class Message extends React.Component {
