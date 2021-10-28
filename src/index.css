@@ -90,6 +90,14 @@ textarea:focus, input:focus{
     align-items: center;
 }
 
+/* MEDIA */
+
+@media only screen and (max-width: 1080px) {
+    body {
+        zoom: 90%;
+    }
+}
+
 /* SCROLL */
 
 ::-webkit-scrollbar {
