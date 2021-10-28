@@ -28,6 +28,13 @@
     background-color: #36393f;
 }
 
+.output-folders-item:first-child > div > div > .message-item > div > div > .message-date {
+    color: #72767d;
+}
+.output-folders-item:first-child > div > div > .message-item > div > .message-content {
+    color: #dcddde;
+}
+
 .output-folders-item:last-child {
     border-radius: 0px 30px 30px 0px;
     background-color: #e3e5e8;
@@ -37,6 +44,13 @@
 }
 .output-folders-item:last-child > div > div > .folder-item:hover {
     background-color: #ffffff;
+}
+
+.output-folders-item:last-child > div > div > .message-item > div > div > .message-date {
+    color: #747f8d;
+}
+.output-folders-item:last-child > div > div > .message-item > div > .message-content {
+    color: #2e3338;
 }
 
 .folder-item {
