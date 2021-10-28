@@ -28,13 +28,12 @@
 
 @font-face {
     font-family: Ginto;
-    src: url(./fonts/otf/ginto-regular.otf),
-    url(./fonts/ttf/ginto-regular.ttf),
-    url(./fonts/woff/ginto-regular.woff),
-    url(./fonts/woff2/ginto-regular.woff2);
-    font-weight: lighter;
+    src: url(./fonts/otf/ginto-bold.otf),
+    url(./fonts/ttf/ginto-bold.ttf),
+    url(./fonts/woff/ginto-bold.woff),
+    url(./fonts/woff2/ginto-bold.woff2);
+    font-weight: bold;
 }
-
 @font-face {
     font-family: Ginto;
     src: url(./fonts/otf/ginto-medium.otf),
@@ -43,14 +42,13 @@
     url(./fonts/woff2/ginto-medium.woff2);
     font-weight: normal;
 }
-
 @font-face {
     font-family: Ginto;
-    src: url(./fonts/otf/ginto-bold.otf),
-    url(./fonts/ttf/ginto-bold.ttf),
-    url(./fonts/woff/ginto-bold.woff),
-    url(./fonts/woff2/ginto-bold.woff2);
-    font-weight: bold;
+    src: url(./fonts/otf/ginto-regular.otf),
+    url(./fonts/ttf/ginto-regular.ttf),
+    url(./fonts/woff/ginto-regular.woff),
+    url(./fonts/woff2/ginto-regular.woff2);
+    font-weight: lighter;
 }
 
 html {
