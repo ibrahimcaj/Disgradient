@@ -15,6 +15,7 @@
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^17.0.1",
     "react-scripts": "^4.0.1",
+    "react-simple-tooltip": "^2.6.3",
     "react-smooth-list": "^1.0.2",
     "request": "^2.88.2",
     "rgb2hex": "^0.2.5",
