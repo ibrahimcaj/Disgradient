@@ -3,6 +3,8 @@ import axios from 'axios';
 import https from 'https';
 import TinyGradient from 'tinygradient';
 
+import Tooltip from './Tooltip';
+
 import '../index.css';
 import '../stylesheets/Output.css';
 
@@ -64,7 +66,10 @@ class Output extends React.Component {
         return (
             <div className="output-code">
                 <div>
-                    <p className="output-code-content">{this.state.code}</p>
+                    <Tooltip content={[ "This is the code you can use to automatically create gradient roles in your server!", <br />, "Click on the code for more information." ]}>
+                        <p className="output-code-content">{this.state.code}</p>
+                    </Tooltip>
+
                     <svg className="output-code-icon" style={{ cursor: (!this.state.changed ? 'not-allowed' : null) }} onClick={(event) => {
                         this.updateCode().then(() => {
                             event.target.classList.add('output-code-icon-success');
