@@ -25,7 +25,7 @@
 .output-messages-item:first-child > div > div > .message-item > div > div > .message-date {
     color: #72767d;
 }
-.output-messages-item:first-child > div > div > .message-item > div > .message-content {
+.output-messages-item:first-child > div > div > div > .message-item > div > .message-content {
     color: #dcddde;
 }
 
@@ -36,7 +36,7 @@
 .output-messages-item:last-child > div > div > .message-item > div > div > .message-date {
     color: #747f8d;
 }
-.output-messages-item:last-child > div > div > .message-item > div > .message-content {
+.output-messages-item:last-child > div > div > div > .message-item > div > .message-content {
     color: #2e3338;
 }
 

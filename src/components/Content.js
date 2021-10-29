@@ -110,7 +110,7 @@ class Content extends React.Component {
                 </div>
                 <div class="right container">
                     <div style={{ width: '100%' }}>
-                        <Output colors={colors} />
+                        <Output colors={colors} points={this.state.points} />
                     </div>
                 </div>
             </div>

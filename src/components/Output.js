@@ -4,6 +4,7 @@ import SmoothList from 'react-smooth-list';
 import Item from './Item';
 import Folder from './Folder';
 import Message from './Message';
+import Code from './Code';
 
 import '../index.css';
 import '../stylesheets/Output.css';
@@ -50,14 +51,18 @@ class Output extends React.Component {
                 outputList = (
                     <div className="output-messages-container">
                         <div class="output-messages-item">
-                            <SmoothList>
-                                {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
-                            </SmoothList>
+                            <div>
+                                <SmoothList>
+                                    {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
+                                </SmoothList>
+                            </div>
                         </div>
                         <div class="output-messages-item">
+                            <div>
                             <SmoothList>
                                 {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
                             </SmoothList>
+                            </div>
                         </div>
                     </div>
                 );
@@ -105,6 +110,7 @@ class Output extends React.Component {
                         </svg>
                     </div>
                 </div>
+                <Code colors={this.props.colors} points={this.props.points} />
 
                 {outputList}
             </div>
