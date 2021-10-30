@@ -92,7 +92,7 @@ class Output extends React.Component {
                                         <br /><br />
                                         Once the bot is in your server, make sure the bot has the needed permissions to create roles.
                                         <br />
-                                        After that, you can use the <code>/create</code> slash command with your gradient code.
+                                        After that, you can use the <code>/setup roles</code> slash command with your gradient code.
                                     </h4>
                                 </div>
                             );
