@@ -66,7 +66,7 @@ class Output extends React.Component {
                 <div>
                     <Tooltip content={[ "This is the code you can use to automatically create gradient roles in your server!", <br />, "Double-click on the code for more information." ]}>
                         <p className="output-code-content" style={{ color: (this.state.copied ? 'var(--success-color)' : null) }} onClick={() => {
-                            navigator.clipboard.writeText(this.state.code);
+                            navigator.clipboard?.writeText(this.state.code);
                             this.setState({ copied: true });
 
                             setTimeout(() => {
