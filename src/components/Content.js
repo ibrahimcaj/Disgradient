@@ -1,6 +1,8 @@
 import React from 'react';
 import TinyGradient from 'tinygradient';
 import SmoothList from 'react-smooth-list';
+import axios from 'axios';
+import https from 'https';
 
 import Color from './Color';
 import Points from './Points';
@@ -17,6 +19,7 @@ class Content extends React.Component {
         this.state = {
             colors: ['#000000', '#000000'],
             points: 2,
+            code: '2PtIBsqlpkaY4vx',
             overlay: null
         };
     }
@@ -72,6 +75,10 @@ class Content extends React.Component {
         });
     }
 
+    updateCode = (code) => {
+        this.setState({ code: code });
+    }
+
     setOverlay = (overlay) => {
         this.setState({
             overlay: overlay
@@ -87,6 +94,24 @@ class Content extends React.Component {
                 overlay: null
             });
         }, 200);
+    }
+
+    componentDidMount() {
+        var code = window.location.search.split('code=')[1];
+
+        console.log(code)
+        if (code) {
+            const agent = new https.Agent({ rejectUnauthorized: false });
+            axios.get(`https://disgradientserver.vanishedvan.repl.co/codes/${code}`, { httpsAgent: agent }).then((response) => {
+                if (!Array.isArray(response.data)) {
+                    this.setState({
+                        code: response.data.id,
+                        colors: response.data.colors,
+                        points: response.data.points
+                    });
+                }
+            }).catch(console.log);
+        }
     }
 
     render() {
@@ -129,7 +154,7 @@ class Content extends React.Component {
                     </div>
                     <div className="right container">
                         <div style={{ width: '100%' }}>
-                            <Output colors={this.state.colors} points={this.state.points} output={colors} setOverlay={this.setOverlay} />
+                            <Output colors={this.state.colors} points={this.state.points} output={colors} setOverlay={this.setOverlay} code={this.state.code} updateCode={this.updateCode} />
                         </div>
                     </div>
                 </div>

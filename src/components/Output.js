@@ -110,7 +110,7 @@ class Output extends React.Component {
                         </svg>
                     </div>
                 </div>
-                <Code colors={this.props.colors} points={this.props.points} output={this.props.output} setOverlay={this.props.setOverlay} />
+                <Code colors={this.props.colors} points={this.props.points} output={this.props.output} setOverlay={this.props.setOverlay} code={this.props.code} updateCode={this.props.updateCode} />
 
                 {outputList}
             </div>

@@ -11,7 +11,6 @@ class Output extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            code: '2PtIBsqlpkaY4vx',
             previous: null,
             changed: false,
             copied: false
@@ -43,6 +42,7 @@ class Output extends React.Component {
                 points: this.props.points,
                 codes: this.props.output
             }, { httpsAgent: agent }).then((response) => {
+                this.props.updateCode(response.data.id);
                 this.setState({
                     code: response.data.id,
                     previous: {
@@ -54,7 +54,7 @@ class Output extends React.Component {
 
                 resolve();
             }).catch((error) => {
-                console.log(error);
+                console.error(error);
                 reject(error);
             });
         });
@@ -66,7 +66,7 @@ class Output extends React.Component {
                 <div>
                     <Tooltip content={[ "This is the code you can use to create gradient", <br />, "roles in your server! Double-click on the", <br />, "code for more information." ]}>
                         <p className="output-code-content" style={{ color: (this.state.copied ? 'var(--success-color)' : null) }} onClick={() => {
-                            navigator.clipboard?.writeText(this.state.code);
+                            navigator.clipboard?.writeText(this.props.code);
                             this.setState({ copied: true });
 
                             setTimeout(() => {
@@ -96,7 +96,7 @@ class Output extends React.Component {
                                     </h4>
                                 </div>
                             );
-                        }}>{this.state.code}</p>
+                        }}>{this.props.code}</p>
                     </Tooltip>
 
                     <svg className="output-code-icon" style={{ cursor: (!this.state.changed ? 'not-allowed' : null) }} onClick={(event) => {
