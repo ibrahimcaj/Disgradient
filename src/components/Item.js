@@ -15,24 +15,24 @@ class Item extends React.Component {
         if (this.state.status === 'success' && !this.state.timeout) this.setState({ timeout: setTimeout(() => this.setState({ status: 'default', timeout: null }), 1500) });
 
         return (
-            <div class="output-list-item" style={{ border: this.state.status === 'success' ? '3px solid var(--success-color)' : '3px solid transparent' }} key={this.props.index}>
-                <div class="box">
-                    <div class="output-list-preview" style={{ backgroundColor: this.props.color }}></div>
-                    <p class="output-list-text">
+            <div className="output-list-item" style={{ border: this.state.status === 'success' ? '3px solid var(--success-color)' : '3px solid transparent' }} key={this.props.index}>
+                <div className="box">
+                    <div className="output-list-preview" style={{ backgroundColor: this.props.color }}></div>
+                    <p className="output-list-text">
                         {this.props.color}
                     </p>
 
-                    <div class="output-list-counter-container">
-                        <div class="output-list-counter" style={{ backgroundColor: this.state.status === 'success' ? 'var(--success-color)' : null }}>
-                            <p class="output-list-counter-text">
+                    <div className="output-list-counter-container">
+                        <div className="output-list-counter" style={{ backgroundColor: this.state.status === 'success' ? 'var(--success-color)' : null }}>
+                            <p className="output-list-counter-text">
                                 {this.props.index + 1}
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="output-list-button" onClick={() => {
-                        navigator.clipboard.writeText(this.props.color);
+                <div className="box">
+                    <div className="output-list-button" onClick={() => {
+                        navigator.clipboard?.writeText(this.props.color);
                         this.setState({ status: 'success' });
                     }}>
                         <svg viewBox="0 0 24 27" xmlns="http://www.w3.org/2000/svg">

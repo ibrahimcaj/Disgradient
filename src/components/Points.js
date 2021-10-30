@@ -14,8 +14,8 @@ class Points extends React.Component {
         if (this.state.status === 'success' && !this.state.timeout) this.setState({ timeout: setTimeout(() => this.setState({ status: 'default', timeout: null }), 1500) });
 
         return (
-            <div class="points-container" style={{ border: this.state.status === 'success' ? `3px solid var(--${this.state.action}-color)` : '3px solid transparent' }}>
-                <div class="points-button" style={{ cursor: this.props.points === 150 ? 'not-allowed' : 'pointer' }} onClick={() => {
+            <div className="points-container" style={{ border: this.state.status === 'success' ? `3px solid var(--${this.state.action}-color)` : '3px solid transparent' }}>
+                <div className="points-button" style={{ cursor: this.props.points === 150 ? 'not-allowed' : 'pointer' }} onClick={() => {
                     this.props.add();
 
                     if (this.props.points !== 150) {
@@ -30,11 +30,11 @@ class Points extends React.Component {
                     </svg>
                 </div>
 
-                <p class="points-text">
+                <p className="points-text">
                     {this.props.points}
                 </p>
 
-                <div class="points-button" style={{ cursor: this.props.points === 2 ? 'not-allowed' : 'pointer' }} onClick={() => {
+                <div className="points-button" style={{ cursor: this.props.points === 2 ? 'not-allowed' : 'pointer' }} onClick={() => {
                     this.props.remove();
 
                     if (this.props.points !== 2) {

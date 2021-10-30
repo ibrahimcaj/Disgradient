@@ -4,6 +4,7 @@ import SmoothList from 'react-smooth-list';
 import Item from './Item';
 import Folder from './Folder';
 import Message from './Message';
+import Code from './Code';
 
 import '../index.css';
 import '../stylesheets/Output.css';
@@ -25,7 +26,7 @@ class Output extends React.Component {
                 outputList = (
                     <div className="output-list-container">
                         <SmoothList>
-                            {this.props.colors.map((color, index) => <Item color={color} index={index} />)}
+                            {this.props.output.map((color, index) => <Item color={color} index={index} />)}
                         </SmoothList>
                     </div>
                 );
@@ -33,14 +34,14 @@ class Output extends React.Component {
             case 'folder':
                 outputList = (
                     <div className="output-folders-container">
-                        <div class="output-folders-item">
+                        <div className="output-folders-item">
                             <SmoothList>
-                                {this.props.colors.map((color, index) => <Folder color={color} index={index} theme={'#2f3136'} />)}
+                                {this.props.output.map((color, index) => <Folder color={color} index={index} theme={'#2f3136'} />)}
                             </SmoothList>
                         </div>
-                        <div class="output-folders-item">
+                        <div className="output-folders-item">
                             <SmoothList>
-                                {this.props.colors.map((color, index) => <Folder color={color} index={index} theme={'#f2f3f5'} />)}
+                                {this.props.output.map((color, index) => <Folder color={color} index={index} theme={'#f2f3f5'} />)}
                             </SmoothList>
                         </div>
                     </div>
@@ -49,15 +50,19 @@ class Output extends React.Component {
             case 'message':
                 outputList = (
                     <div className="output-messages-container">
-                        <div class="output-messages-item">
-                            <SmoothList>
-                                {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
-                            </SmoothList>
+                        <div className="output-messages-item">
+                            <div>
+                                <SmoothList>
+                                    {this.props.output.map((color, index) => <Message color={color} index={index} />)}
+                                </SmoothList>
+                            </div>
                         </div>
-                        <div class="output-messages-item">
-                            <SmoothList>
-                                {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
-                            </SmoothList>
+                        <div className="output-messages-item">
+                            <div>
+                                <SmoothList>
+                                    {this.props.output.map((color, index) => <Message color={color} index={index} />)}
+                                </SmoothList>
+                            </div>
                         </div>
                     </div>
                 );
@@ -66,7 +71,7 @@ class Output extends React.Component {
                 outputList = (
                     <div className="output-list-container">
                         <SmoothList>
-                            {this.props.colors.map((color, index) => <Item color={color} index={index} />)}
+                            {this.props.output.map((color, index) => <Item color={color} index={index} />)}
                         </SmoothList>
                     </div>
                 );
@@ -105,6 +110,7 @@ class Output extends React.Component {
                         </svg>
                     </div>
                 </div>
+                <Code colors={this.props.colors} points={this.props.points} output={this.props.output} setOverlay={this.props.setOverlay} code={this.props.code} updateCode={this.props.updateCode} />
 
                 {outputList}
             </div>
