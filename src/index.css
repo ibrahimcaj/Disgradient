@@ -127,7 +127,7 @@ a:hover {
     color: var(--text-color);
     background-color: var(--background-secondary);
 }
-.overlay-content > div {
+.overlay-content > div:first-child {
     width: 100%;
 }
 .overlay-sidebar {
