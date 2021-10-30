@@ -34,12 +34,12 @@ class Output extends React.Component {
             case 'folder':
                 outputList = (
                     <div className="output-folders-container">
-                        <div class="output-folders-item">
+                        <div className="output-folders-item">
                             <SmoothList>
                                 {this.props.output.map((color, index) => <Folder color={color} index={index} theme={'#2f3136'} />)}
                             </SmoothList>
                         </div>
-                        <div class="output-folders-item">
+                        <div className="output-folders-item">
                             <SmoothList>
                                 {this.props.output.map((color, index) => <Folder color={color} index={index} theme={'#f2f3f5'} />)}
                             </SmoothList>
@@ -50,18 +50,18 @@ class Output extends React.Component {
             case 'message':
                 outputList = (
                     <div className="output-messages-container">
-                        <div class="output-messages-item">
+                        <div className="output-messages-item">
                             <div>
                                 <SmoothList>
                                     {this.props.output.map((color, index) => <Message color={color} index={index} />)}
                                 </SmoothList>
                             </div>
                         </div>
-                        <div class="output-messages-item">
+                        <div className="output-messages-item">
                             <div>
-                            <SmoothList>
-                                {this.props.output.map((color, index) => <Message color={color} index={index} />)}
-                            </SmoothList>
+                                <SmoothList>
+                                    {this.props.output.map((color, index) => <Message color={color} index={index} />)}
+                                </SmoothList>
                             </div>
                         </div>
                     </div>

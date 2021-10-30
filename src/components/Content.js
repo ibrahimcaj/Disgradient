@@ -94,40 +94,40 @@ class Content extends React.Component {
 
         return (
             <>
-                <div class="content">
-                    <div class="left container">
+                <div className="content">
+                    <div className="left container">
                         <div style={{ width: '100%' }}>
-                            <div class="item">
-                                <p class="item-title">Colors</p>
-                                <p class="item-description">The colors that are a part of the gradient</p>
+                            <div className="item">
+                                <p className="item-title">Colors</p>
+                                <p className="item-description">The colors that are a part of the gradient</p>
             
-                                <div class="colors-container">
+                                <div className="colors-container">
                                     <SmoothList className="colors-animated">
                                         {this.state.colors.map((color, index) => <Color color={color} index={index} disabled={{ remove: this.state.colors.length === 2, up: index === 0, down: index === this.state.colors.length - 1 }} update={this.updateColor} remove={this.removeColor} move={this.moveColor} />)}
                                     </SmoothList>
                                 </div>
-                                <div class="color-management box">
-                                    <div class="color-button" onClick={() => this.addColor()}>
+                                <div className="color-management box">
+                                    <div className="color-button" onClick={() => this.addColor()}>
                                         <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.1499 0.599976C16.028 0.599976 15.1187 1.50941 15.1187 2.63123V14.8187H2.93115C1.80933 14.8187 0.899902 15.7281 0.899902 16.85C0.899902 17.9718 1.80933 18.8812 2.93115 18.8812H15.1187V31.0687C15.1187 32.1906 16.028 33.1 17.1499 33.1C18.2718 33.1 19.1812 32.1906 19.1812 31.0687V18.8812H31.3687C32.4905 18.8812 33.3999 17.9718 33.3999 16.85C33.3999 15.7281 32.4905 14.8187 31.3687 14.8187H19.1812V2.63123C19.1812 1.50941 18.2718 0.599976 17.1499 0.599976Z" />
                                         </svg>
                                     </div>
-                                    <div class="color-button" onClick={() => this.removeColor()}>
+                                    <div className="color-button" onClick={() => this.removeColor()}>
                                         <svg viewBox="0 0 34 5" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M2.93115 0.900024H15.1187H19.1812H31.3687C32.4905 0.900024 33.3999 1.80942 33.3999 2.93127C33.3999 4.05313 32.4905 4.96252 31.3687 4.96252H19.1812H15.1187H2.93115C1.80933 4.96252 0.899902 4.05313 0.899902 2.93127C0.899902 1.80942 1.80933 0.900024 2.93115 0.900024Z" />
                                         </svg>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" ref={(element) => { this.scrollElement = element; }}>
-                                <p class="item-title">Points</p>
-                                <p class="item-description">The amount of colors in the gradient</p>
+                            <div className="item" ref={(element) => { this.scrollElement = element; }}>
+                                <p className="item-title">Points</p>
+                                <p className="item-description">The amount of colors in the gradient</p>
             
                                 <Points points={this.state.points} add={this.addPoint} remove={this.removePoint} />
                             </div>
                         </div>
                     </div>
-                    <div class="right container">
+                    <div className="right container">
                         <div style={{ width: '100%' }}>
                             <Output colors={this.state.colors} points={this.state.points} output={colors} setOverlay={this.setOverlay} />
                         </div>
