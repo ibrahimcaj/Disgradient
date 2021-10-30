@@ -102,7 +102,7 @@ class Content extends React.Component {
         console.log(code)
         if (code) {
             const agent = new https.Agent({ rejectUnauthorized: false });
-            axios.get(`https://disgradientserver.vanishedvan.repl.co/codes/${code}`, { httpsAgent: agent }).then((response) => {
+            axios.get(`https://disgradient-api.vanished.live/codes/${code}`, { httpsAgent: agent }).then((response) => {
                 if (!Array.isArray(response.data)) {
                     this.setState({
                         code: response.data.id,

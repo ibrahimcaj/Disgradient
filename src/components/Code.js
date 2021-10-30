@@ -37,7 +37,7 @@ class Output extends React.Component {
             if (!this.state.changed) return;
 
             const agent = new https.Agent({ rejectUnauthorized: false });
-            axios.post('https://disgradientserver.vanishedvan.repl.co/codes', {
+            axios.post('https://disgradient-api.vanished.live/codes', {
                 colors: this.props.colors,
                 points: this.props.points,
                 codes: this.props.output
