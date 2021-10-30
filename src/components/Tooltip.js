@@ -12,7 +12,7 @@ class Tooltip extends React.Component {
                 color="var(--text-color)"
                 fontSize={'13px'} 
                 
-                style={{ whiteSpace: "nowrap", maxWidth: "150px", textAlign: 'center' }}
+                style={{ whiteSpace: "nowrap", textAlign: 'center', textOverflow: 'break-word' }}
                 fadeDuration={100} fadeEasing="linear" 
                  
                 placement="top" arrow={10} padding={10} radius={10} zIndex={1}
