@@ -14,7 +14,8 @@ class Output extends React.Component {
         this.state = {
             code: '2PtIBsqlpkaY4vx',
             previous: null,
-            changed: false
+            changed: false,
+            copied: false
         }
     }
 
@@ -38,11 +39,10 @@ class Output extends React.Component {
             if (!this.state.changed) return;
 
             const agent = new https.Agent({ rejectUnauthorized: false });
-
             axios.post('https://disgradientserver.vanishedvan.repl.co/codes', {
                 colors: this.props.colors,
                 points: this.props.points,
-                codes: TinyGradient(this.props.colors).rgb(this.props.points).map((color) => `#${color.toHex()}`)
+                codes: this.props.output
             }, { httpsAgent: agent }).then((response) => {
                 this.setState({
                     code: response.data.id,
@@ -62,20 +62,52 @@ class Output extends React.Component {
     }
 
     render() {
-        console.log(this.state.code);
         return (
             <div className="output-code">
                 <div>
-                    <Tooltip content={[ "This is the code you can use to automatically create gradient roles in your server!", <br />, "Click on the code for more information." ]}>
-                        <p className="output-code-content">{this.state.code}</p>
+                    <Tooltip content={[ "This is the code you can use to automatically create gradient roles in your server!", <br />, "Double-click on the code for more information." ]}>
+                        <p className="output-code-content" style={{ color: (this.state.copied ? 'var(--success-color)' : null) }} onClick={() => {
+                            navigator.clipboard.writeText(this.state.code);
+                            this.setState({ copied: true });
+
+                            setTimeout(() => {
+                                this.setState({ copied: false });
+                            }, 1000);
+                        }} onDoubleClick={() => {
+                            this.props.setOverlay(
+                                <div>
+                                    <h3 style={{ margin: '0px 0px 5px 0px' }}>What is a gradient code?</h3>
+                                    <h4 style={{ fontWeight: 'lighter', margin: '0' }}>
+                                        Gradient codes are used to automatically create gradient roles in your Discord server.
+                                        <br />
+                                        To create gradient roles in your server, simply click on the refresh button, copy the code and use it with our <a href="https://discord.com/api/oauth2/authorize?client_id=725639183246557254&permissions=268435456&scope=bot%20applications.commands">Discord bot</a>.
+
+                                        <br /><br />
+                                        If you need any help, you can always join our <a href="https://discord.gg/AHtZW9JXTA">Discord server</a> and ask for help!
+                                    </h4>
+
+                                    <h3 style={{ margin: '25px 0px 5px 0px' }}>How to generate the roles?</h3>
+                                    <h4 style={{ fontWeight: 'lighter', margin: '0' }}>
+                                        To invite the bot to your server, you can use the following link: <a href="https://discord.com/api/oauth2/authorize?client_id=725639183246557254&permissions=268435456&scope=bot%20applications.commands">https://discord.com/api/oauth2/authorize?client_id=725639183246557254&permissions=268435456&scope=bot%20applications.commands</a>
+
+                                        <br /><br />
+                                        Once the bot is in your server, make sure the bot has the needed permissions to create roles.
+                                        <br />
+                                        After that, you can use the <code>/create</code> slash command with your gradient code.
+                                    </h4>
+                                </div>
+                            );
+                        }}>{this.state.code}</p>
                     </Tooltip>
 
                     <svg className="output-code-icon" style={{ cursor: (!this.state.changed ? 'not-allowed' : null) }} onClick={(event) => {
                         this.updateCode().then(() => {
                             event.target.classList.add('output-code-icon-success');
+                            this.setState({ copied: true });
 
                             setTimeout(() => {
                                 event.target.classList.remove('output-code-icon-success');
+                                this.setState({ copied: false });
                             }, 1500);
                         }).catch(() => {
                             event.target.style.opacity = '1 !important';

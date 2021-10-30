@@ -139,6 +139,7 @@
     text-align: center;
 
     cursor: pointer;
+    transition: color .2s ease;
 
     white-space: nowrap;
     overflow: hidden;

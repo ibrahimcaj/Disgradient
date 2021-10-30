@@ -26,7 +26,7 @@ class Output extends React.Component {
                 outputList = (
                     <div className="output-list-container">
                         <SmoothList>
-                            {this.props.colors.map((color, index) => <Item color={color} index={index} />)}
+                            {this.props.output.map((color, index) => <Item color={color} index={index} />)}
                         </SmoothList>
                     </div>
                 );
@@ -36,12 +36,12 @@ class Output extends React.Component {
                     <div className="output-folders-container">
                         <div class="output-folders-item">
                             <SmoothList>
-                                {this.props.colors.map((color, index) => <Folder color={color} index={index} theme={'#2f3136'} />)}
+                                {this.props.output.map((color, index) => <Folder color={color} index={index} theme={'#2f3136'} />)}
                             </SmoothList>
                         </div>
                         <div class="output-folders-item">
                             <SmoothList>
-                                {this.props.colors.map((color, index) => <Folder color={color} index={index} theme={'#f2f3f5'} />)}
+                                {this.props.output.map((color, index) => <Folder color={color} index={index} theme={'#f2f3f5'} />)}
                             </SmoothList>
                         </div>
                     </div>
@@ -53,14 +53,14 @@ class Output extends React.Component {
                         <div class="output-messages-item">
                             <div>
                                 <SmoothList>
-                                    {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
+                                    {this.props.output.map((color, index) => <Message color={color} index={index} />)}
                                 </SmoothList>
                             </div>
                         </div>
                         <div class="output-messages-item">
                             <div>
                             <SmoothList>
-                                {this.props.colors.map((color, index) => <Message color={color} index={index} />)}
+                                {this.props.output.map((color, index) => <Message color={color} index={index} />)}
                             </SmoothList>
                             </div>
                         </div>
@@ -71,7 +71,7 @@ class Output extends React.Component {
                 outputList = (
                     <div className="output-list-container">
                         <SmoothList>
-                            {this.props.colors.map((color, index) => <Item color={color} index={index} />)}
+                            {this.props.output.map((color, index) => <Item color={color} index={index} />)}
                         </SmoothList>
                     </div>
                 );
@@ -110,7 +110,7 @@ class Output extends React.Component {
                         </svg>
                     </div>
                 </div>
-                <Code colors={this.props.colors} points={this.props.points} />
+                <Code colors={this.props.colors} points={this.props.points} output={this.props.output} setOverlay={this.props.setOverlay} />
 
                 {outputList}
             </div>

@@ -10,7 +10,7 @@ class Tooltip extends React.Component {
                 background="var(--button-background-default)"
                 border="var(--button-background-default)"
                 color="var(--text-color)"
-                fontSize={'12px'} 
+                fontSize={'13px'} 
                 
                 style={{ whiteSpace: "nowrap", maxWidth: "150px", textAlign: 'center' }}
                 fadeDuration={100} fadeEasing="linear" 
