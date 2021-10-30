@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import https from 'https';
-import TinyGradient from 'tinygradient';
 
 import Tooltip from './Tooltip';
 
