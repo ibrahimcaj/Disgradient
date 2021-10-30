@@ -119,12 +119,16 @@ a:hover {
     justify-content: center;
 
     max-width: 65%;
+    overflow-wrap: break-word;
 
     padding: 30px;
     border-radius: 25px;
 
     color: var(--text-color);
     background-color: var(--background-secondary);
+}
+.overlay-content > div {
+    width: 100%;
 }
 .overlay-sidebar {
     width: 30px;
